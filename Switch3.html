@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)login -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>首页</title>
+	
+	
+	<meta http-equiv="Authorization" content="eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb21tb25Ub2tlbiIsInN1YiI6Imxpamlhbmh1YTAxQGhuZWNnYy5jb20uY24iLCJleHAiOjE1OTA3ODM2ODUsIm5iZiI6MTU5MDc0MDQ4NX0.5JYwNdkwytrqlDauNfIZ48Cdk6p3OjnusZ-QehPCeMU">
+	<link rel="shortcut icon" href="images/favicon-hnny.ico" type="image/x-icon">
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/index.css">
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+    
+	<style>
+		.site-list li {
+			width: 130px;
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 15px;
+		}
+		form {
+			color: #337ab7;
+		}
+		.asd {
+			padding: 2% 0 0 10%;
+		}
+		.zxc {
+			position: absolute;
+			top: 20%;
+			right: 5%;
+		}
+	</style>
+</head>
+
+<!-- style="overflow:-Scroll;overflow-x:hidden"  -->
+<body>
+
+	<div class="container" style="width: 100%">
+		<div class="row">
+			<div class="col-lg-12">
+			   <div class="NavBox">
+			      <img class="FloatLeft NavLogo" src="images/top.gif">	     
+			      <div >
+			         <a class="FloatLeft Nav" href="http://www.hnecgc.com.cn/" target="_blank">集团网站</a>
+					 <a class="FloatLeft Nav" href="http://172.16.172.121:7000/">统一身份认证管理</a><!--ymyqadmin,ADmanage2018-->					 
+					 <a class="FloatLeft Nav" href="https://home.hnecgc.com.cn/">统一认证访问平台</a><!--lipengfei03,Ymyq000000-->
+					 <a class="FloatLeft Nav" href="http://oa.hnmqh.com/seeyon/index.jsp">OA</a>
+					 <a class="FloatLeft Nav" href="http://10.213.1.2/">MES(IE浏览器)</a>
+					 <a class="FloatLeft Nav" href="https://tinysafety.fxgkpt.com/">微安全</a>
+					 <a class="FloatLeft Nav" href="https://10.205.79.10">EDR</a><!--admin,sangfor@123-->
+					 <a class="FloatLeft Nav" href="https://172.16.172.101">SIP</a>
+					 <a class="FloatLeft Nav" href="https://10.205.79.8">潜伏威胁探针</a>
+					 <a class="FloatLeft Nav" href="https://218.28.37.250/">SSL VPN</a>
+			      </div>
+				  <div>
+				  	  <form class="navbar-form navbar-right" style="padding: 9px" autocomplete="off">
+	
+				      </form>
+				      <div>
+
+				  	  </div>
+				  </div>		      
+			   </div>
+			</div>
+		</div>
+		
+		<div class="TopBack" style="display: none;"><img src="images/top.png"></div>
+        
+		<!--<div class="row">
+			<div class="col-lg-12">
+				<div >
+				      <a><img class="IndexBanner" src="images/banner03.jpg" ></a>
+				      <a><img class="IndexBanner" src="images/banner03.jpg" ></a>
+      				  <a><img class="IndexBanner" src="images/banner03.jpg" ></a>
+				</div>
+		   	</div>
+		</div>-->
+		
+		<div class="asd">
+			
+<h3>作为三层交换机，部署用户的网关，实现跨网段数据访问</h3>
+
+<h4>PC1：valn21，IP：192.168.21.2 24，网关：192.168.21.1 24</h4>
+<h4>PC2：valn31，IP：192.168.31.2 24，网关：192.168.31.1 24</h4>
+<h4>路由器配置：子接口配置IP地址192.168.4.1 24，终结vlan4</h4>
+<h4>已存在静态路由</h4>
+<h4> ip route-static 192.168.21.0 255.255.255.0 192.168.4.2</h4>
+<h4> ip route-static 192.168.31.0 255.255.255.0 192.168.4.2</h4>
+
+<p><li>[HUAWEI]vlan batch 4 21 31 -----创建vlan4，21，31</li>
+<li>[HUAWEI]int Vlanif 4</li>
+<li>[HUAWEI-Vlanif4]ip address 192.168.4.2 24</li>
+<li>[HUAWEI-Vlanif4]q</li>
+<li>[HUAWEI]int Vlanif 21</li>
+<li>[HUAWEI-Vlanif21]ip add 192.168.21.1 24</li>
+<li>[HUAWEI-Vlanif21]q</li>
+<li>[HUAWEI]int Vlanif 31</li>
+<li>[HUAWEI-Vlanif31]ip address 192.168.31.1 24</li>
+<li>[HUAWEI-Vlanif31]q -----配置vlanif接口</li>
+<li>[HUAWEI]int g0/0/10</li>
+<li>[HUAWEI-GigabitEthernet0/0/10]port link-type access    </li>
+<li>[HUAWEI-GigabitEthernet0/0/10]port default vlan 21</li>
+<li>[HUAWEI-GigabitEthernet0/0/10]q</li>
+<li>[HUAWEI]int g0/0/11</li>
+<li>[HUAWEI-GigabitEthernet0/0/11]port link-type access</li>
+<li>[HUAWEI-GigabitEthernet0/0/11]port default vlan 31</li>
+<li>[HUAWEI-GigabitEthernet0/0/11]q -----设置GE0/0/10 GE0/0/11以access方式加入对应的vlan</li>
+<li>[HUAWEI]int g0/0/12</li>
+<li>[HUAWEI-GigabitEthernet0/0/12]port link-type trunk</li>
+<li>[HUAWEI-GigabitEthernet0/0/12]port trunk allow-pass vlan 4</li>
+<li>[HUAWEI-GigabitEthernet0/0/12]q -----配置连接路由器的接口GE0/0/12以trunk方式加入vlan4</li>
+<li>[HUAWEI]ip route-static 0.0.0.0 0.0.0.0 192.168.4.1 -----配置缺省路由</li></p>
+
+
+
+
+
+
+
+
+		</div>
+		<div class="zxc"><img src="images/switch3.png" alt=""></div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="jumbotron" style="margin: 0px;padding: 10px">
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<!--全部主题-->
+				<div class="CenterBox cccsss" style="margin-top:20px">
+					<!--<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.gov.cn/" href="http://www.gov.cn/">中国政府网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.henan.gov.cn/" href="http://www.henan.gov.cn/">河南省政府</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.hnsasac.gov.cn/" href="http://www.hnsasac.gov.cn/">河南省国资委</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.miit.gov.cn/" href="http://www.miit.gov.cn/">国家工信部</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.iitha.gov.cn/" href="http://www.iitha.gov.cn/">河南省工信委</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.hnsjct.gov.cn/" href="http://www.hnsjct.gov.cn/">河南省纪委</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.hngh.org/" href="http://www.hngh.org/">河南省工会</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.ha.hrss.gov.cn/" href="http://www.ha.hrss.gov.cn/">河南人社厅</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.coalchina.org.cn/" href="http://www.coalchina.org.cn/">煤炭工业网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.sina.com.cn" href="http://www.sina.com.cn/">新浪网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.sohu.com" href="http://www.sohu.com/">搜狐网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.xinhuanet.com/" href="http://www.xinhuanet.com/">新华网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.ifeng.com/" href="http://www.ifeng.com/">凤凰网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.qq.com/" href="http://www.qq.com/">腾讯网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.dangjian.cn/" href="http://www.dangjian.cn/">党建网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.cctv.com/" href="http://www.cctv.com/">央视网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.people.com.cn/" href="http://www.people.com.cn/">人民网</a></li>	
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.baidu.com/" href="http://www.baidu.com">百度</a></li>-->						   			   		
+				</div>
+	
+			</div>
+		</div>	
+
+	</div>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="js/bootstrap-table.min.js"></script>
+	
+	<!-- Latest compiled and minified Locales -->
+	<script src="js/bootstrap-table-zh-CN.min.js"></script>
+	<script src="js//focus.js"></script>
+	
+	<script type="text/javascript">
+		//判断是否已经登录，没有登录自动登录。
+		var token = "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb21tb25Ub2tlbiIsInN1YiI6Imxpamlhbmh1YTAxQGhuZWNnYy5jb20uY24iLCJleHAiOjE1OTA3ODM2ODUsIm5iZiI6MTU5MDc0MDQ4NX0.5JYwNdkwytrqlDauNfIZ48Cdk6p3OjnusZ-QehPCeMU";
+		window.onload = function(){
+			var storage = window.localStorage;
+			var loginName = storage.getItem("loginName");
+			if(loginName != null){
+				// 写入loginName字段
+				$("#loginName").val(loginName);
+			}else{
+				$("#loginName").val("");
+			}
+			
+			var password = storage.getItem("password");
+			if(password != null){
+	            // 写入password字段
+	            $("#password").val(password);
+			}else{
+				$("#password").val("");
+			}
+			
+            //设置选中/取消状态
+            var status = storage.getItem("rmbUserInfo");
+            //localStorage中存储的都是string类型
+            if(status == 'true'){
+	            $("#savePassword").attr("checked",true)
+            }else{
+            	$("#savePassword").attr("checked",false)
+            }
+            //记录状态，success,failure,logout,null
+            var status = "success";
+            
+            if(token == null && status == null && $("#loginName").val() != "" && $("#password").val() != ""){
+	            $("#loginForm").submit();
+            }
+		}
+		
+		//搜索
+	    function search(){
+	        $("#searchForm").submit();
+	    }
+		  
+		 //IndexNewsContent
+		$(".IndexTopicBox.mylogin").click(function(){
+			if(token == null || token == ""){
+				alert("请先登陆。");
+				return false;
+			}
+		});
+		
+	    function saveUserInfo(){
+		    if(!window.localStorage){
+	            alert("浏览器不支持localStorage");
+	        }else{
+	            var storage = window.localStorage;
+		        if($("#savePassword").is(':checked')){
+		            // 写入loginName字段
+		            storage.setItem("loginName",$("#loginName").val());//官方推荐使用   
+		            // 写入password字段
+		            storage.setItem("password",$("#password").val());
+		            storage.setItem("rmbUserInfo",true);
+	        	}else{
+	        		//storage.clear();
+	        		// 清空loginName字段
+	        		storage.removeItem("loginName");
+		            // 清空password字段
+		            storage.removeItem("password");
+		            storage.setItem("rmbUserInfo",false);
+	        	}
+	        }
+	    }
+		
+	    //添加收藏
+	    function focusAdd(){
+	    	//打开收藏窗口
+	    	var focusName = $("#focusName").val();
+	    	var url = $("#url").val();
+	    	var ajaxUrl = "\/focus\/focusAdd";
+	    	
+	    	$.ajax({
+	    		data:{"focusName":focusName,"url":url},
+	    		type:"POST",
+	    		dataType:"TEXT",
+	    		url:ajaxUrl,
+	    		success:function(data){
+	    			if(data == 1){
+	    				alert("添加成功！");
+	    				$('#tb_departments').bootstrapTable("refresh");
+	    			}else{
+	    				alert(data);
+	    			}
+	    		}
+	    	});
+	    }
+	    
+	       //添加收藏
+        function focusRemove(focusId){
+	    	if(focusId == null || focusId == ""){
+	    		alert("请选择要删除的数据。");
+	    	}
+            //打开收藏窗口
+            var focusName = $("#focusName").val();
+            var url = $("#url").val();
+            var ajaxUrl = "\/focus\/focusRemove";
+            
+            $.ajax({
+                data:{"focusId":focusId},
+                type:"POST",
+                dataType:"TEXT",
+                url:ajaxUrl,
+                success:function(data){
+                    if(data == 1){
+                        alert("删除成功！");
+                        $('#tb_departments').bootstrapTable("refresh");
+                    }else{
+                        alert(data);
+                    }
+                }
+            });
+        }
+	       
+        //初始化模态框事件
+        //$("#focus-model").on("shown.bs.modal",function(){
+            //alert("dd");
+            //$('#tb_departments').bootstrapTable("resetView");
+        //});
+        
+	</script>
+
+</body></html>

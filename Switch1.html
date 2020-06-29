@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)login -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>首页</title>
+	
+	
+	<meta http-equiv="Authorization" content="eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb21tb25Ub2tlbiIsInN1YiI6Imxpamlhbmh1YTAxQGhuZWNnYy5jb20uY24iLCJleHAiOjE1OTA3ODM2ODUsIm5iZiI6MTU5MDc0MDQ4NX0.5JYwNdkwytrqlDauNfIZ48Cdk6p3OjnusZ-QehPCeMU">
+	<link rel="shortcut icon" href="images/favicon-hnny.ico" type="image/x-icon">
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/index.css">
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+    
+	<style>
+		.site-list li {
+			width: 130px;
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 15px;
+		}
+		form {
+			color: #337ab7;
+		}
+		.asd {
+			padding: 2% 0 0 10%;
+		}
+		.zxc {
+			position: fixed;
+			top: 0;
+		}
+	</style>
+</head>
+
+<!-- style="overflow:-Scroll;overflow-x:hidden"  -->
+<body>
+
+	<div class="container" style="width: 100%">
+		<div class="row">
+			<div class="col-lg-12">
+			   <div class="NavBox">
+			      <img class="FloatLeft NavLogo" src="images/top.gif">	     
+			      <div >
+			         <a class="FloatLeft Nav" href="http://www.hnecgc.com.cn/" target="_blank">集团网站</a>
+					 <a class="FloatLeft Nav" href="http://172.16.172.121:7000/">统一身份认证管理</a><!--ymyqadmin,ADmanage2018-->					 
+					 <a class="FloatLeft Nav" href="https://home.hnecgc.com.cn/">统一认证访问平台</a><!--lipengfei03,Ymyq000000-->
+					 <a class="FloatLeft Nav" href="http://oa.hnmqh.com/seeyon/index.jsp">OA</a>
+					 <a class="FloatLeft Nav" href="http://10.213.1.2/">MES(IE浏览器)</a>
+					 <a class="FloatLeft Nav" href="https://tinysafety.fxgkpt.com/">微安全</a>
+					 <a class="FloatLeft Nav" href="https://10.205.79.10">EDR</a><!--admin,sangfor@123-->
+					 <a class="FloatLeft Nav" href="https://172.16.172.101">SIP</a>
+					 <a class="FloatLeft Nav" href="https://10.205.79.8">潜伏威胁探针</a>
+					 <a class="FloatLeft Nav" href="https://218.28.37.250/">SSL VPN</a>
+			      </div>
+				  <div>
+				  	  <form class="navbar-form navbar-right" style="padding: 9px" autocomplete="off">
+	
+				      </form>
+				      <div>
+
+				  	  </div>
+				  </div>		      
+			   </div>
+			</div>
+		</div>
+		
+		<div class="TopBack" style="display: none;"><img src="images/top.png"></div>
+        
+		<!--<div class="row">
+			<div class="col-lg-12">
+				<div >
+				      <a><img class="IndexBanner" src="images/banner03.jpg" ></a>
+				      <a><img class="IndexBanner" src="images/banner03.jpg" ></a>
+      				  <a><img class="IndexBanner" src="images/banner03.jpg" ></a>
+				</div>
+		   	</div>
+		</div>-->
+		
+		<div class="asd">
+			<h3>恢复出厂设置</h3>
+			<p>
+				<li>[HUAWEI]reset saved-configuration </li>
+                <li>Warning: The action will delete the saved configuration in the device.</li>
+                <li>The configuration will be erased to reconfigure. Continue? [Y/N]:y</li>
+                <li>[HUAWEI]reboot</li>
+                <li>Info: The system is now comparing the configuration, please wait..........</li>
+                <li>Warning: The configuration has been modified, and it will be saved to the next startup saved-configuration file . Continue? [Y/N]:n-----是否保存配置，no</li>
+                <li>System will reboot! Continue?[Y/N]:y</li>
+            </p>
+            <h3>console口登录密码遗失</h3>
+            <h4>1、通过其他登录方式如：telnet或stelnet登录重置密码</h4>
+            <h5>登陆时认证方式是密码：</h5>
+			<p>
+				<li>[HUAWEI]user-interface console 0</li>
+                <li>[HUAWEI-ui-console0]authentication-mode password</li>
+                <li>[HUAWEI-ui-console0]set authentication password cipher xxhbgs2019</li>
+                <li>[HUAWEI-ui-console0]return</li>
+            <h5>登陆时认证方式是aaa:</h5>
+                <p>
+                    <li>[HUAWEI]user-interface console 0</li>
+                    <li>[HUAWEI-ui-console0]authentication-mode aaa</li>
+                    <li>[HUAWEI-ui-console0]q</li>
+                    <li>[HUAWEI]aaa</li>  
+                    <li>[HUAWEI-aaa]local-user admin123 password irreversible-cipher xxhbgs2019</li>
+                    <li>[HUAWEI-aaa]local-user admin123 service-type terminal</li>
+                    <li>[HUAWEI-aaa]return</li>              
+            </p>
+            <h4>2、通过bootrom菜单清楚密码（设备需重启）</h4>
+            <p><li>Press Ctrl+B or Ctrl+E to enter BootLoad menu:  1 </li>
+            <li>Password: -----Admin@huawei.com</li>
+        <li>Enter your choice(1-8): 7-----清除console口密码</li>
+    <li>Enter your choice(1-8): 1-----不能选择reboot，否则此次清除密码将失效</li>
+<li>执行清除Console密码的选项，其实是将Console口的认证方式设为None认证，设备重新启动后，不需要输入用户名和密码，可以直接登录设备。</li></p>
+
+<h3>配置console登录认证方式及超时时间-----xxhbgs2019</h3>
+<p>
+    <li>[HUAWEI]user-interface console 0 -----进入console配置模式</li>
+    <li>[HUAWEI-ui-console0]authentication-mode password -----设置认证模式为password</li>
+    <li>[HUAWEI-ui-console0]set authentication password cipher xxhbgs2019 -----设置密码</li>
+    <li>[HUAWEI-ui-console0]idle-timeout 10 0 -----设置超时时间</li>
+</p>
+<h3>配置telnet登录认证方式</h3>
+<h4>配置密文登录</h4>
+<p>
+    <li>[HUAWEI]user-interface vty 0 4 -----进入模式，0 4表示允许5个并发链接</li>
+    <li>[HUAWEI-ui-vty0-4]authentication-mode password -----设置认证模式为password</li>
+    <li>[HUAWEI-ui-vty0-4]set authentication password cipher xxhbgs2019 -----设置密码</li>
+    <li>[HUAWEI-ui-vty0-4]user privilege level 3 -----设置用户等级3，缺省为1（0访问级1监控级2系统级3管理级）</li>
+</p>
+<h4>telnet远程登录设备 192.168.0.1 255.255.255.0 admin123 xxhbgs2019</h4>
+<p>
+    <li>[HUAWEI]telnet server enable -----开启telnet服务</li>
+    <li>[HUAWEI]user-interface maximum-vty 8    </li>
+    <li>[HUAWEI]user-interface vty 0 4</li>
+    <li>[HUAWEI-ui-vty0-4]protocol inbound telnet </li>
+    <li>[HUAWEI-ui-vty0-4]authentication-mode aaa</li>
+    <li>[HUAWEI-ui-vty0-4]q -----配置vty用户界面    </li>
+    <li>[HUAWEI]aaa</li>
+    <li>[HUAWEI-aaa]local-user admin123 password irreversible-cipher xxhbgs2019</li>
+    <li>[HUAWEI-aaa]local-user admin123 service-type telnet</li>
+    <li>[HUAWEI-aaa]local-user admin123 privilege level 3</li>
+    <li>Warning: This operation may affect online users, are you sure to change the user privilege level ?[Y/N]y</li>
+    <li>[HUAWEI-aaa]q -----配置aaa认证</li>
+</p>
+
+<h3>配置vlan</h3>
+<p><li>[HUAWEI]vlan 30</li>
+<li>[HUAWEI-vlan30]q</li>
+<li>[HUAWEI]interface vlanif 30</li>
+<li>[HUAWEI-Vlanif30]ip address 192.168.0.1 255.255.255.0</li>
+<li>[HUAWEI-Vlanif30]q</li>
+<li>[HUAWEI-GigabitEthernet0/0/7]port default vlan 30</li></p>
+
+<h3>删除vlan30</h3>
+
+<p><li>[HUAWEI]undo vlan 30 -----删除vlan30</li>
+<li>[HUAWEI]dis vlan</li></p>
+
+<h3>端口批量配置</h3>
+
+<p><li>[HUAWEI]port-group 1 -----创建端口组1，并进入端口视图</li>
+<li>[HUAWEI-port-group-1]group-member GigabitEthernet 0/0/1 to GigabitEthernet 0/0/20 -----配置0/0/1到0/0/20加入端口组1</li>
+<li>[HUAWEI-port-group-1]port link-type trunk -----配置端口类型为trunk</li>
+<li>[HUAWEI-port-group-1]port trunk allow-pass vlan 30 -----配置端口允许vlan30通过</li>
+<li>[HUAWEI-port-group-1]port link-type access -----配置端口类型为access</li>
+<li>[HUAWEI-port-group-1]port default vlan 30  -----配置端口默认vlan30通过</li>
+
+<li>Access类型的端口只能属于1个VLAN,一般用于连接计算机的端口。</li>
+<li>Trunk类型的端口可以允许多个VLAN通过，可以接收和发送多个VLAN的报文，一般用于交换机之间连接的端口。</li></p>
+
+<h3>IPSG(ip和mac绑定)静态配置</h3>
+
+<p><li>[HUAWEI]user-bind static ip-address 192.168.0.2 mac-address A85E-459D-5315 -----绑定</li>
+<li>[HUAWEI]user-bind static ip-address 192.168.0.3 mac-address A85E-459D-5316 -----绑定</li>
+<li>[HUAWEI]int gig 0/0/1  -----进入GE0/0/1接口视图</li>
+<li>[HUAWEI-GigabitEthernet0/0/1]ip source check user-bind enable  -----使能 GE0/0/1接口胡IPSG检查功能</li>
+<li>[HUAWEI-GigabitEthernet0/0/1]q</li>
+<li>......</li>
+<li>[HUAWEI]int gig 0/0/7</li>
+<li>[HUAWEI-GigabitEthernet0/0/7]ip source check user-bind enable</li>
+<li>[HUAWEI-GigabitEthernet0/0/7]q</li></p>
+
+
+<h3>IPSG(ip和mac绑定)动态配置</h3>
+
+<h4>通过部署IPSG只能使用DHCP分配的IP方式，不允许私自配置地址，否则将无法访问网络</h4>
+
+<p><li>[HUAWEI]dhcp enable ------全局开启HDCP</li>
+<li>[HUAWEI]dhcp snooping enable -----全局使用DHCP Snooping功能</li>
+<li>[HUAWEI]vlan 30</li>
+<li>[HUAWEI-vlan30]dhcp snooping enable -----vlan30开启HDCP</li>
+<li>[HUAWEI-vlan30]dhcp snooping trusted interface gig 0/0/7 -----将连接DHCP的GE0/0/7设为信任接口</li>
+<li>[HUAWEI-vlan30]ip source check user-bind enable -----基于vlan使用IPSG检查功能</li>
+
+<li>[HUAWEI]dis dhcp static user-bind all 查看静态绑定表</li>
+<li>[HUAWEI]display dhcp snooping user-bind all 查看DHCP Snooping动态绑定表</li></p>
+
+<h3>配置DHCP Server和DHCP Relay</h3>
+
+<p><li>[HUAWEI]ip pool pool2 -----新增地址池pool2</li>
+<li>[HUAWEI-ip-pool-pool2]network 192.168.0.0 mask  255.255.255.0</li>
+<li>[HUAWEI-ip-pool-pool2]gateway-list 192.168.0.254 -----网关地址</li>
+<li>[HUAWEI-ip-pool-pool2]dns-list 8.8.8.8 -----dns地址</li>
+<li>[HUAWEI-ip-pool-pool2]lease day 1 hour 1 -----租用时间</li>
+<li>[HUAWEI-ip-pool-pool2]q</li>
+<li>[HUAWEI]interface vlanif 30</li>
+<li>[HUAWEI-Vlanif30]dhcp select global </li></p>
+
+
+
+
+
+
+
+
+		</div>
+	
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="jumbotron" style="margin: 0px;padding: 10px">
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<!--全部主题-->
+				<div class="CenterBox cccsss" style="margin-top:20px">
+					<!--<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.gov.cn/" href="http://www.gov.cn/">中国政府网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.henan.gov.cn/" href="http://www.henan.gov.cn/">河南省政府</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.hnsasac.gov.cn/" href="http://www.hnsasac.gov.cn/">河南省国资委</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.miit.gov.cn/" href="http://www.miit.gov.cn/">国家工信部</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.iitha.gov.cn/" href="http://www.iitha.gov.cn/">河南省工信委</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.hnsjct.gov.cn/" href="http://www.hnsjct.gov.cn/">河南省纪委</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.hngh.org/" href="http://www.hngh.org/">河南省工会</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.ha.hrss.gov.cn/" href="http://www.ha.hrss.gov.cn/">河南人社厅</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.coalchina.org.cn/" href="http://www.coalchina.org.cn/">煤炭工业网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.sina.com.cn" href="http://www.sina.com.cn/">新浪网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.sohu.com" href="http://www.sohu.com/">搜狐网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.xinhuanet.com/" href="http://www.xinhuanet.com/">新华网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.ifeng.com/" href="http://www.ifeng.com/">凤凰网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.qq.com/" href="http://www.qq.com/">腾讯网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.dangjian.cn/" href="http://www.dangjian.cn/">党建网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.cctv.com/" href="http://www.cctv.com/">央视网</a></li>
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.people.com.cn/" href="http://www.people.com.cn/">人民网</a></li>	
+					<li><a class="hvr-wobble-horizontal" target="_blank" title="http://www.baidu.com/" href="http://www.baidu.com">百度</a></li>-->						   			   		
+				</div>
+	
+			</div>
+		</div>	
+
+	</div>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="js/bootstrap-table.min.js"></script>
+	
+	<!-- Latest compiled and minified Locales -->
+	<script src="js/bootstrap-table-zh-CN.min.js"></script>
+	<script src="js//focus.js"></script>
+	
+	<script type="text/javascript">
+		//判断是否已经登录，没有登录自动登录。
+		var token = "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb21tb25Ub2tlbiIsInN1YiI6Imxpamlhbmh1YTAxQGhuZWNnYy5jb20uY24iLCJleHAiOjE1OTA3ODM2ODUsIm5iZiI6MTU5MDc0MDQ4NX0.5JYwNdkwytrqlDauNfIZ48Cdk6p3OjnusZ-QehPCeMU";
+		window.onload = function(){
+			var storage = window.localStorage;
+			var loginName = storage.getItem("loginName");
+			if(loginName != null){
+				// 写入loginName字段
+				$("#loginName").val(loginName);
+			}else{
+				$("#loginName").val("");
+			}
+			
+			var password = storage.getItem("password");
+			if(password != null){
+	            // 写入password字段
+	            $("#password").val(password);
+			}else{
+				$("#password").val("");
+			}
+			
+            //设置选中/取消状态
+            var status = storage.getItem("rmbUserInfo");
+            //localStorage中存储的都是string类型
+            if(status == 'true'){
+	            $("#savePassword").attr("checked",true)
+            }else{
+            	$("#savePassword").attr("checked",false)
+            }
+            //记录状态，success,failure,logout,null
+            var status = "success";
+            
+            if(token == null && status == null && $("#loginName").val() != "" && $("#password").val() != ""){
+	            $("#loginForm").submit();
+            }
+		}
+		
+		//搜索
+	    function search(){
+	        $("#searchForm").submit();
+	    }
+		  
+		 //IndexNewsContent
+		$(".IndexTopicBox.mylogin").click(function(){
+			if(token == null || token == ""){
+				alert("请先登陆。");
+				return false;
+			}
+		});
+		
+	    function saveUserInfo(){
+		    if(!window.localStorage){
+	            alert("浏览器不支持localStorage");
+	        }else{
+	            var storage = window.localStorage;
+		        if($("#savePassword").is(':checked')){
+		            // 写入loginName字段
+		            storage.setItem("loginName",$("#loginName").val());//官方推荐使用   
+		            // 写入password字段
+		            storage.setItem("password",$("#password").val());
+		            storage.setItem("rmbUserInfo",true);
+	        	}else{
+	        		//storage.clear();
+	        		// 清空loginName字段
+	        		storage.removeItem("loginName");
+		            // 清空password字段
+		            storage.removeItem("password");
+		            storage.setItem("rmbUserInfo",false);
+	        	}
+	        }
+	    }
+		
+	    //添加收藏
+	    function focusAdd(){
+	    	//打开收藏窗口
+	    	var focusName = $("#focusName").val();
+	    	var url = $("#url").val();
+	    	var ajaxUrl = "\/focus\/focusAdd";
+	    	
+	    	$.ajax({
+	    		data:{"focusName":focusName,"url":url},
+	    		type:"POST",
+	    		dataType:"TEXT",
+	    		url:ajaxUrl,
+	    		success:function(data){
+	    			if(data == 1){
+	    				alert("添加成功！");
+	    				$('#tb_departments').bootstrapTable("refresh");
+	    			}else{
+	    				alert(data);
+	    			}
+	    		}
+	    	});
+	    }
+	    
+	       //添加收藏
+        function focusRemove(focusId){
+	    	if(focusId == null || focusId == ""){
+	    		alert("请选择要删除的数据。");
+	    	}
+            //打开收藏窗口
+            var focusName = $("#focusName").val();
+            var url = $("#url").val();
+            var ajaxUrl = "\/focus\/focusRemove";
+            
+            $.ajax({
+                data:{"focusId":focusId},
+                type:"POST",
+                dataType:"TEXT",
+                url:ajaxUrl,
+                success:function(data){
+                    if(data == 1){
+                        alert("删除成功！");
+                        $('#tb_departments').bootstrapTable("refresh");
+                    }else{
+                        alert(data);
+                    }
+                }
+            });
+        }
+	       
+        //初始化模态框事件
+        //$("#focus-model").on("shown.bs.modal",function(){
+            //alert("dd");
+            //$('#tb_departments').bootstrapTable("resetView");
+        //});
+        
+	</script>
+
+</body></html>
